@@ -77,6 +77,7 @@ class TopAlbumsFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener {
                                     val intent= Intent(context, DetailsActivity::class.java)
                                     intent.putExtra("result",result)
                                     startActivity(intent)
+                                    activity?.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left)
                                 }
 
 
