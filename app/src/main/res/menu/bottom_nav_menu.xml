@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_coming_soon"
+        android:icon="@drawable/ic_coming_soon"
+        android:title="@string/title_coming_soon" />
+
+    <item
+        android:id="@+id/navigation_hot_tracks"
+        android:icon="@drawable/ic_hot_tracks"
+        android:title="@string/title_hot_tracks" />
+
+    <item
+        android:id="@+id/navigation_new_releases"
+        android:icon="@drawable/ic_new_release"
+        android:title="@string/title_new_release" />
+
+    <item
+        android:id="@+id/navigation_top_albums"
+        android:icon="@drawable/ic_top_albums"
+        android:title="@string/title_top_albums" />
+
+    <item
+        android:id="@+id/navigation_top_songs"
+        android:icon="@drawable/ic_top_songs"
+        android:title="@string/title_top_songs" />
+
+</menu>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_coming_soon">
+
+    <fragment
+        android:id="@+id/navigation_coming_soon"
+        android:name="com.feeds.ui.home.fragments.ComingSoonFragment"
+        android:label="@string/title_coming_soon"
+        tools:layout="@layout/fragment_coming_soon" />
+
+    <fragment
+        android:id="@+id/navigation_hot_tracks"
+        android:name="com.feeds.ui.home.fragments.HotTracksFragment"
+        android:label="@string/title_hot_tracks"
+        tools:layout="@layout/fragment_hot_tracks" />
+
+    <fragment
+        android:id="@+id/navigation_new_releases"
+        android:name="com.feeds.ui.home.fragments.NewRelasesFragment"
+        android:label="@string/title_new_release"
+        tools:layout="@layout/fragment_new_relases" />
+
+    <fragment
+        android:id="@+id/navigation_top_albums"
+        android:name="com.feeds.ui.home.fragments.TopAlbumsFragment"
+        android:label="@string/title_top_albums"
+        tools:layout="@layout/fragment_top_albums" />
+
+    <fragment
+        android:id="@+id/navigation_top_songs"
+        android:name="com.feeds.ui.home.fragments.TopSongsFragment"
+        android:label="@string/title_top_songs"
+        tools:layout="@layout/fragment_top_songs" />
+
+</navigation>
