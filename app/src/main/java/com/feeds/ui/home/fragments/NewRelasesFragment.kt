@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -18,7 +19,11 @@ import com.feeds.rest.ApiClient
 import com.feeds.rest.exceptions.NoNetworkException
 import com.feeds.ui.adapters.SongsAdapter
 import com.feeds.ui.details.DetailsActivity
+import kotlinx.android.synthetic.main.fragment_coming_soon.*
 import kotlinx.android.synthetic.main.fragment_new_relases.*
+import kotlinx.android.synthetic.main.fragment_new_relases.progressBar
+import kotlinx.android.synthetic.main.fragment_new_relases.rvSongs
+import kotlinx.android.synthetic.main.fragment_new_relases.swipeRefresh
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -85,7 +90,7 @@ class NewRelasesFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener {
 
                         rvSongs.setHasFixedSize(true)
                         rvSongs.layoutManager = LinearLayoutManager(context)
-
+                        rvSongs.layoutAnimation= AnimationUtils.loadLayoutAnimation(context,R.anim.layout_animation_fall_down)
                         rvSongs.adapter = adapter
                         adapter.notifyDataSetChanged()
 

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -91,6 +92,8 @@ class ComingSoonFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
                         rvSongs.layoutManager = LinearLayoutManager(context)
 
                         rvSongs.adapter = adapter
+
+                        rvSongs.layoutAnimation=AnimationUtils.loadLayoutAnimation(context,R.anim.layout_animation_fall_down)
                         adapter.notifyDataSetChanged()
 
 
